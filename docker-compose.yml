@@ -1,0 +1,17 @@
+services:
+  peristicket_web:
+    image: ghcr.io/armancoders/persiaticketsbilitnowflutterweb:latest
+    #build:
+      #context: .
+      #dockerfile: Dockerfile    
+    #ports:
+    #  - "80:80"
+    networks:
+      proxy-network:
+      persia_tickets_internal:
+
+networks:
+  proxy-network:
+    external: true
+  persia_tickets_internal:
+    external: true

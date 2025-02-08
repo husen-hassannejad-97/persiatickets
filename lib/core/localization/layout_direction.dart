@@ -1,0 +1,4 @@
+enum LayoutDirection {
+  rtl,
+  ltr;
+}

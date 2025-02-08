@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1087817668813",
+    "project_id": "billit-now",
+    "storage_bucket": "billit-now.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1087817668813:android:e7993f5cf7bde1935a7184",
+        "android_client_info": {
+          "package_name": "com.armancoders.billitnow"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtCnD3auOAKbyoq6yFuwTHkBptYJK4Blk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

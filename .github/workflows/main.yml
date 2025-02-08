@@ -1,0 +1,47 @@
+name: Flutter CI/CD and Deploy on Portainer
+
+on:
+  push:
+    branches: [ "main" ]
+
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+      
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+          #with:
+          #flutter-version: '3.24.5'  # Ensure Dart >= 3.4.1 is bundled
+      
+      - name: Flutter Pub Get
+        run: flutter pub get
+
+      - name: Flutter Build Web
+        run: flutter build web --release
+
+      # Login to your container registry
+      # Example for GitHub Container Registry:
+      - name: Login to GHCR
+        run: echo "${{ secrets.CR_PAT }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+
+      # If using Docker Hub instead, do:
+      # - name: Login to Docker Hub
+      #   run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
+
+      # Build and Push Docker image
+      # Adjust the image name/path as needed (GHCR or Docker Hub)
+      - name: Build and Push Docker Image
+        run: |
+          docker build -t ghcr.io/armancoders/persiaticketsbilitnowflutterweb:latest .
+          docker push ghcr.io/armancoders/persiaticketsbilitnowflutterweb:latest
+
+      # Trigger Portainer Webhook
+      - name: Trigger Portainer Webhook
+        #run: curl -X POST "https://contabo-portainer.armancoders.com:9000/api/stacks/webhooks/26767d4d-4209-4af1-9863-2e171b9ea240"
+        run: curl -X POST "https://contabo-portainer.armancoders.com/api/stacks/webhooks/26767d4d-4209-4af1-9863-2e171b9ea240"

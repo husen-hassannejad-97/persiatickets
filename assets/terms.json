@@ -1,0 +1,37 @@
+{
+    "intro" : "To create a user account, you must read and agree to the following terms and conditions",
+    "terms" : [
+        {
+            "title" : "Ticket Purchase",
+            "desc" : "All ticket sales are final. After purchase, you can change your seat or position for a few minutes, after which tickets are non-refundable or exchangeable, unless the event is canceled or rescheduled."
+        },
+        {
+            "title" : "Event Changes",
+            "desc" :  "We reserve the right to make changes to events, including date, time, venue and order. We will notify users of any material changes via email or via the Platform."
+        },
+        {
+            "title" : "Account",
+            "desc" : "Users must create an account to purchase tickets. You are responsible for maintaining the confidentiality of your account information and all activities that occur under your account."
+        },
+        {
+            "title" : "Age restrictions",
+            "desc" : "Some events may have age restrictions. It is the user's responsibility to ensure that they meet the age requirements of the event."
+        },
+        {
+            "title" : "Code of Conduct",
+            "desc" : "Users must adhere to all rules and regulations set forth by the event organizers and venue. Disruptive behavior may result in expulsion from the event without a refund."
+        },
+        {
+            "title" : "Data Privacy",
+            "desc" : "We respect your privacy. Personal data collected during the registration and purchase process will be handled in accordance with our Privacy Policy."
+        },
+        {
+            "title" : "Limitation of Liability",
+            "desc" : "We are not responsible for any indirect, incidental or consequential damages arising from the use of the Services or attendance at the Events."
+        },
+        {
+            "title" : "Governing Law",
+            "desc" : "These terms are governed by the laws of Austria and Germany. Any dispute will be settled in the relevant courts of the respective country."
+        }
+    ]
+}
